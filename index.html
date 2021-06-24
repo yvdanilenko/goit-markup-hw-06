@@ -631,6 +631,7 @@
             <div class="modal-form-group">
               <label for="comment">Комментарий</label>
               <textarea
+                class="user-comment"
                 name="comment"
                 id=""
                 rows="10"
@@ -638,13 +639,21 @@
               ></textarea>
             </div>
 
-            <div class="modal-form-agreement">
-              <input type="checkbox" name="agreement" id="agreement" />
-              <label for="agreement">
+            <label class="agreement">
+              <input
+                class="visually-hidden modal-checkbox-input"
+                type="checkbox"
+                name="agreement"
+              />
+              <svg class="checkbox-icon" width="16" height="15">
+                <use href="./images/sprite/sprite.svg#icon-check"></use>
+              </svg>
+
+              <span class="agreement-label">
                 Соглашаюсь с рассылкой и принимаю
-                <a class="agreement-link" href="">Условия договора</a>
-              </label>
-            </div>
+              </span>
+              <a class="agreement-link link" href="">Условия договора</a>
+            </label>
 
             <div class="modal-btn-submit">
               <button type="submit" class="modal-form-btn">Отправить</button>
