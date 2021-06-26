@@ -331,7 +331,7 @@ a.link-header {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--white-color);
   fill: rgba(0, 0, 0, 1);
 
@@ -342,15 +342,16 @@ a.link-header {
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-icon:hover,
-.modal-icon:focus,
-.modal-icon:active {
-  fill: var(--accent-color);
+.modal-close-button:hover,
+.modal-close-button:focus,
+.modal-close-button:active {
+  border: 1px solid var(--accent-color);
 }
 
-.modal-close-button:hover,
-.modal-close-button:focus {
-  border: 1px solid var(--accent-color);
+.modal-close-button:hover .modal-icon,
+.modal-close-button:hover .modal-icon,
+.modal-close-button:hover .modal-icon {
+  fill: var(--accent-color);
 }
 
 /* advantage */
@@ -877,6 +878,9 @@ li.contacts-list-item > a.phone::before {
 }
 
 /* footer social icons */
+.join-form {
+  margin-right: 93px;
+}
 
 .join,
 .subscribe-title {
@@ -917,10 +921,12 @@ li.contacts-list-item > a.phone::before {
 
 /* ______forms__________________________________ */
 
+.modal {
+  padding: 40px;
+}
+
 .modal-form-data {
   width: 448px;
-  padding-top: 40px;
-  padding-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -939,7 +945,7 @@ li.contacts-list-item > a.phone::before {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 .modal-form-group input {
@@ -974,6 +980,9 @@ li.contacts-list-item > a.phone::before {
   padding-right: 16px;
   padding-bottom: 12px;
   padding-left: 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 .modal-form-group textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -1054,17 +1063,15 @@ input[type='checkbox'] + label {
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  margin-top: 20px;
-  margin-bottom: 30px;
+  cursor: pointer;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .agreement-link {
   color: var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
   font-size: 14px;
-}
-
-.subscribe-form {
-  margin-left: 93px;
 }
 
 .subscribe-mail {
@@ -1081,6 +1088,14 @@ input[type='checkbox'] + label {
   background-color: rgba(47, 48, 58, 1);
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--light-color-fon);
+}
+
+.subscribe-input:hover,
+.subscribe-input:focus,
+.subscribe-input:active {
+  border: 1px solid var(--accent-color);
+  outline: none;
 }
 
 .subscribe-form input::placeholder {
