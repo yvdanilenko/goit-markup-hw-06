@@ -878,9 +878,6 @@ li.contacts-list-item > a.phone::before {
 }
 
 /* footer social icons */
-.join-form {
-  margin-right: 93px;
-}
 
 .join,
 .subscribe-title {
@@ -948,6 +945,10 @@ li.contacts-list-item > a.phone::before {
   margin-bottom: 10px;
 }
 
+.modal-form-group.form-comment {
+  margin-bottom: 20px;
+}
+
 .modal-form-group input {
   height: 40px;
   border-radius: 4px;
@@ -959,7 +960,9 @@ li.contacts-list-item > a.phone::before {
 }
 
 .modal-form-group input:hover,
-.modal-form-group input:focus {
+.modal-form-group input:focus,
+.modal-form-group textarea:focus,
+.modal-form-group textarea:hover {
   border: 1px solid var(--accent-color);
   outline: none;
 }
@@ -1057,21 +1060,25 @@ input[type='checkbox'] + label {
   transform: scale(1.5);
 }
 
-.agreement-label {
-  display: inline-block;
+.agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   cursor: pointer;
-
-  margin-top: 10px;
-  margin-bottom: 20px;
 }
+
 .agreement-link {
   color: var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
   font-size: 14px;
+}
+
+.subscribe-form {
+  margin-left: auto;
 }
 
 .subscribe-mail {
